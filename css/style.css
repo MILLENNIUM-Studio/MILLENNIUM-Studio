@@ -517,13 +517,13 @@ article .meta .categories a:hover {
 footer {
   flex-shrink: 0;
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 0.75rem 0;
   background: var(--blur-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--text-secondary);
   box-shadow: 0 -2px 15px var(--shadow);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
   position: relative;
@@ -532,48 +532,59 @@ footer {
 }
 footer .container {
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 footer .container p {
   margin: 0;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  line-height: 1.5;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 0.4rem;
+  line-height: 1.4;
 }
 footer .container p span {
   display: inline-block;
   white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
-footer .footer-divider {
-  opacity: 0.4;
-  margin: 0;
-  padding: 0;
+footer .container .copyright {
+  font-weight: 500;
 }
-footer .theme-info a {
+footer .container .footer-divider {
+  opacity: 0.3;
+  user-select: none;
+  margin: 0 0.2rem;
+}
+footer .container .theme-info a {
   color: var(--accent-color);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
-footer .theme-info a:hover {
+footer .container .theme-info a:hover {
   color: var(--accent-hover);
-  text-decoration: underline;
+  opacity: 0.9;
 }
 @media (max-width: var(--mobile-width)) {
   footer {
-    padding: 0.8rem 0;
-    font-size: 0.8rem;
+    padding: 0.75rem 0;
   }
   footer .container {
-    padding: 0 0.8rem;
+    padding: 0;
   }
   footer .container p {
     gap: 0.4rem;
+    padding: 0 0.5rem;
   }
   footer .container p span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    opacity: 0.6;
   }
 }
 .post {
